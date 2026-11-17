@@ -1,0 +1,44 @@
+# ---------- MATLAB ----------
+*.asv
+*.m~
+*.autosave
+*.mex*
+*.mlappinstall
+*.mltbx
+helpsearch*/
+codegen/
+
+# ---------- Simulink ----------
+slprj/
+sccprj/
+*.slxc
+*.slx.r20*
+*.slx.original
+*.mdl.r20*
+*.slxp
+*_ert_rtw/
+*_grt_rtw/
+*_rtw/
+
+# ---------- ROS 2 / colcon ----------
+build/
+install/
+log/
+__pycache__/
+*.pyc
+
+# ---------- Large or generated files (link to them instead) ----------
+*.mp4
+*.mov
+*.avi
+*.f3d
+*.f3z
+*.step
+*.stp
+
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.swp
