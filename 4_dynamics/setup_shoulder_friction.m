@@ -1,0 +1,29 @@
+function environment = setup_shoulder_friction(dependencyRoot)
+%SETUP_SHOULDER_FRICTION Add this model and check the Peter Corke toolboxes.
+% The optional folder contains the three named toolbox directories below.
+here=fileparts(mfilename('fullpath'));
+if nargin>0 && ~isempty(dependencyRoot)
+    for name={'toolbox-common-matlab','spatialmath-matlab','robotics-toolbox-matlab'}
+        folder=fullfile(dependencyRoot,name{1});
+        assert(isfolder(folder),'ELE208:dependency','Missing %s.',folder);
+        addpath(folder,'-begin');
+    end
+end
+addpath(fullfile(here,'support'),'-begin');
+addpath(here,'-begin');
+assert(strcmp(which('createRobot'),fullfile(here,'support','createRobot.m')), ...
+    'ELE208:path','Another createRobot copy is in use. Change Current Folder to 4_dynamics.');
+assert(exist('Link','class')==8 && exist('SerialLink','class')==8 && ...
+    exist('SE3','class')==8 && exist('tb_optparse','file')==2, ...
+    'ELE208:dependency','Peter Corke RTB, Spatial Math and toolbox-common are required.');
+for name={'ele208_source_data','ele208_dynamics_model','ele208_joint2_coefficients'}
+    assert(strcmp(which(name{1}),fullfile(here,[name{1} '.m'])), ...
+        'ELE208:path','Another model copy is in use. Change Current Folder to this folder.');
+end
+environment=struct('matlabVersion',version,'release',version('-release'), ...
+    'architecture',computer,'sourceData',which('ele208_source_data'), ...
+    'model',which('ele208_dynamics_model'),'Link',which('Link'), ...
+    'SerialLink',which('SerialLink'),'SE3',which('SE3'), ...
+    'tb_optparse',which('tb_optparse'),'createRobot',which('createRobot'), ...
+    'ControlSystemToolboxUsed',false);
+end

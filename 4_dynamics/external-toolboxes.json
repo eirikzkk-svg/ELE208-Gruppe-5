@@ -1,0 +1,26 @@
+[
+  {
+    "name": "robotics-toolbox-matlab",
+    "url": "https://github.com/petercorke/robotics-toolbox-matlab.git",
+    "commit": "06fddf5228cbfa1132fa63b8e336b43c5ed04899",
+    "commitDate": "2026-10-01T18:01:33-04:00",
+    "release": "10.4",
+    "modified": false
+  },
+  {
+    "name": "spatialmath-matlab",
+    "url": "https://github.com/petercorke/spatialmath-matlab.git",
+    "commit": "6eeff4a79f14286705560b84f1fe72e0b7e0e7f7",
+    "commitDate": "2021-11-05T19:47:05+10:00",
+    "release": "1.0",
+    "modified": false
+  },
+  {
+    "name": "toolbox-common-matlab",
+    "url": "https://github.com/petercorke/toolbox-common-matlab.git",
+    "commit": "6678f1a23e9b4f5abe98c23768de2b0e278a9362",
+    "commitDate": "2019-04-28T17:28:47+10:00",
+    "release": "",
+    "modified": false
+  }
+]
