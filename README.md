@@ -37,7 +37,7 @@ Run `setup.m` first. Each script can then be run on its own.
 | 2.i.1 | Equivalence with Robotics Toolbox | `1_kinematics/req_2i1_toolbox_equivalence.m` |
 | 2.i.2 | Differential kinematics (Jacobian) | `1_kinematics/req_2i2_jacobian_static_torques.m` |
 | 2.i.3 | Inverse kinematics | `1_kinematics/req_2i3_inverse_kinematics.m` |
-| 2.i.4, 3 | Motion planning and simulation | `3_motion_planning/` |
+| 2.i.4, 3 | Motion planning and simulation (pick trajectory) | `3_motion_planning/planPick2.m`, run from `2_sensor/req_2ii_sensor_pick.m` |
 | 2.ii | Camera measurement used to command the robot | `2_sensor/req_2ii_sensor_pick.m` |
 | 4.i | Dynamic model with realistic parameters | `4_dynamics/` |
 | 4.ii | Joint dynamic model and transfer function | `5_control/` |
