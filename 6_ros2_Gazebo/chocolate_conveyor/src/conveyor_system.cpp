@@ -19,6 +19,9 @@ class ConveyorSystem :
   public gz::sim::ISystemPreUpdate
 {
 public:
+// AI-assisted (ChatGPT):
+// Assistance with Gazebo API usage, conveyor movement
+// and debugging the simulation.
   void PreUpdate(
     const gz::sim::UpdateInfo &_info,
     gz::sim::EntityComponentManager &_ecm) override
@@ -104,6 +107,8 @@ public:
           std::cout << std::endl;
         }
 
+        // AI-assisted (ChatGPT):
+        // Proportional velocity regulation using AddWorldForce().
         if (!velocity)
           return true;
 
