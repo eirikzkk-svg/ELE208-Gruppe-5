@@ -13,6 +13,9 @@
 class ChocolateTracking : public rclcpp::Node
 {
 public:
+// AI-assisted (ChatGPT):
+// Assistance with connecting Gazebo Transport to ROS 2
+// and configuring the chocolate position publisher.
     ChocolateTracking() : Node("chocolate_tracking")
     {
         publisher_ =
@@ -36,6 +39,9 @@ public:
     }
 
 private:
+// AI-assisted (ChatGPT):
+// Assistance with processing Gazebo pose messages
+// and publishing chocolate positions through ROS 2.
     void OnPoses(const gz::msgs::Pose_V &_msg)
     {
         chocolate_interfaces::msg::ChocolatePoseArray array;
