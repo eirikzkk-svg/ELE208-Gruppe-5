@@ -17,7 +17,9 @@ CHOCOLATE_WIDTH = 0.077
 BELT_X = 1.0
 BELT_Y = -2.0
 
-
+# AI-assisted (ChatGPT):
+# Assistance with suggesting sulution for randomizing chocolate positions and
+# orientations, and spawning models in Gazebo.
 def spawn_chocolate():
     # Tilfeldig rotasjon
     yaw = random.uniform(-math.pi / 2, math.pi / 2)
