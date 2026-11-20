@@ -1,0 +1,374 @@
+{
+  "modelId": "ELE208-hollow-modular-2026-11-04-v2",
+  "dynamicsVariantId": "ELE208-v2-shoulder-viscous-2026-11-09-v1",
+  "parameterSHA256": "b26763543d1974f28a67de45bd01c55218ffe1ce73519290a9783dcbf32454e4",
+  "parameterHashScope": "unchanged v2 rigid-body source",
+  "generatedBy": "check_shoulder_friction.m",
+  "joint": 2,
+  "pose_rad": [
+    0,
+    0.78539816339744828,
+    0,
+    0,
+    0
+  ],
+  "poseRole": "Controller test configuration, not proven global worst case",
+  "otherJointsHeld": [
+    1,
+    3,
+    4,
+    5
+  ],
+  "friction": {
+    "assumed": true,
+    "motorB_Nm_s_rad": 0.000817,
+    "jointB_Nm_s_rad": 11.961697,
+    "joint": 2,
+    "basis": "Eirik 9 November 2026: borrowed PUMA 560 shoulder simulation value",
+    "measuredForThisRobot": false,
+    "otherJoints": "viscous friction omitted",
+    "Coulomb": "omitted on all joints",
+    "RTBSource": "models/mdl_puma560.m, shoulder B=817e-6"
+  },
+  "units": "kg*m^2, N*m, rad, s",
+  "cases": {
+    "empty": {
+      "loadCase": "empty",
+      "joint": 2,
+      "q0_rad": [
+        0,
+        0.78539816339744828,
+        0,
+        0,
+        0
+      ],
+      "qd0_rad_s": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "otherJointsHeld": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "gripperMass_kg": 2,
+      "objectMass_kg": 0,
+      "movingMass_kg": 42.4152903856223,
+      "J_kgm2": 29.976577055768303,
+      "Jrigid_kgm2": 24.925432055768308,
+      "JrotorAlreadyIncluded_kgm2": 5.051145,
+      "motorJm_kgm2": 0.000345,
+      "gearRatioMagnitude": 121,
+      "motorB_Nm_s_rad": 0.000817,
+      "B_Nm_s_rad": 11.961697000000001,
+      "CoulombFriction_Nm": [
+        0,
+        0
+      ],
+      "friction": {
+        "assumed": true,
+        "motorB_Nm_s_rad": 0.000817,
+        "jointB_Nm_s_rad": 11.961697,
+        "joint": 2,
+        "basis": "Eirik 9 November 2026: borrowed PUMA 560 shoulder simulation value",
+        "measuredForThisRobot": false,
+        "otherJoints": "viscous friction omitted",
+        "Coulomb": "omitted on all joints",
+        "RTBSource": "models/mdl_puma560.m, shoulder B=817e-6"
+      },
+      "tauEquilibrium_Nm": 153.8640471955452,
+      "fullHoldingTorque_Nm": [
+        5.3967144809283339E-16,
+        153.8640471955452,
+        55.541222213307421,
+        2.0327178720489472,
+        0
+      ],
+      "Kg_Nm_rad": -150.05180164105286,
+      "speedTimeConstant_s": 2.5060471817475647,
+      "speedDCGain_rad_s_per_Nm": 0.083600178135259565,
+      "primaryGravityTreatment": "current-angle, correct-load gravity compensation",
+      "primaryInput": "u2 = tau2 - g2(q), applied joint torque in N*m",
+      "constantHoldingInput": "delta_tau2 = tau2 - g2(q0), applied joint torque in N*m",
+      "positionOutput": "x=q2-q0(2), rad",
+      "speedOutput": "v=qd2, rad/s",
+      "continuousGravity": {
+        "effectiveK_Nm_rad": 0,
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            -0,
+            -0.39903478565102707
+          ]
+        ],
+        "B": [
+          0,
+          0.033359379162590984
+        ],
+        "C": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "D": [
+          0,
+          0
+        ],
+        "position": {
+          "numerator": 1,
+          "denominator": [
+            29.976577055768303,
+            11.961697000000001,
+            0
+          ]
+        },
+        "speed": {
+          "numerator": 1,
+          "denominator": [
+            29.976577055768303,
+            11.961697000000001
+          ]
+        },
+        "poles_s_inv": [
+          0,
+          -0.39903478565102707
+        ]
+      },
+      "constantHolding": {
+        "effectiveK_Nm_rad": -150.05180164105286,
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            5.0056349449737736,
+            -0.39903478565102707
+          ]
+        ],
+        "B": [
+          0,
+          0.033359379162590984
+        ],
+        "C": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "D": [
+          0,
+          0
+        ],
+        "position": {
+          "numerator": 1,
+          "denominator": [
+            29.976577055768303,
+            11.961697000000001,
+            -150.05180164105286
+          ]
+        },
+        "speed": {
+          "numerator": [
+            1,
+            0
+          ],
+          "denominator": [
+            29.976577055768303,
+            11.961697000000001,
+            -150.05180164105286
+          ]
+        },
+        "poles_s_inv": [
+          -2.4457235576762963,
+          2.04668877202527
+        ]
+      }
+    },
+    "maximum": {
+      "loadCase": "maximum",
+      "joint": 2,
+      "q0_rad": [
+        0,
+        0.78539816339744828,
+        0,
+        0,
+        0
+      ],
+      "qd0_rad_s": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "otherJointsHeld": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "gripperMass_kg": 2,
+      "objectMass_kg": 5,
+      "movingMass_kg": 47.4152903856223,
+      "J_kgm2": 39.367100589101632,
+      "Jrigid_kgm2": 34.315955589101634,
+      "JrotorAlreadyIncluded_kgm2": 5.051145,
+      "motorJm_kgm2": 0.000345,
+      "gearRatioMagnitude": 121,
+      "motorB_Nm_s_rad": 0.000817,
+      "B_Nm_s_rad": 11.961697000000001,
+      "CoulombFriction_Nm": [
+        0,
+        0
+      ],
+      "friction": {
+        "assumed": true,
+        "motorB_Nm_s_rad": 0.000817,
+        "jointB_Nm_s_rad": 11.961697,
+        "joint": 2,
+        "basis": "Eirik 9 November 2026: borrowed PUMA 560 shoulder simulation value",
+        "measuredForThisRobot": false,
+        "otherJoints": "viscous friction omitted",
+        "Coulomb": "omitted on all joints",
+        "RTBSource": "models/mdl_puma560.m, shoulder B=817e-6"
+      },
+      "tauEquilibrium_Nm": 209.19130616250291,
+      "fullHoldingTorque_Nm": [
+        -1.4015815401338444E-15,
+        209.19130616250291,
+        87.5403001489363,
+        10.703614776348985,
+        0
+      ],
+      "Kg_Nm_rad": -188.03726679941047,
+      "speedTimeConstant_s": 3.2910966219175783,
+      "speedDCGain_rad_s_per_Nm": 0.083600178135259565,
+      "primaryGravityTreatment": "current-angle, correct-load gravity compensation",
+      "primaryInput": "u2 = tau2 - g2(q), applied joint torque in N*m",
+      "constantHoldingInput": "delta_tau2 = tau2 - g2(q0), applied joint torque in N*m",
+      "positionOutput": "x=q2-q0(2), rad",
+      "speedOutput": "v=qd2, rad/s",
+      "continuousGravity": {
+        "effectiveK_Nm_rad": 0,
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            -0,
+            -0.30385008855113577
+          ]
+        ],
+        "B": [
+          0,
+          0.025401921529289346
+        ],
+        "C": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "D": [
+          0,
+          0
+        ],
+        "position": {
+          "numerator": 1,
+          "denominator": [
+            39.367100589101632,
+            11.961697000000001,
+            0
+          ]
+        },
+        "speed": {
+          "numerator": 1,
+          "denominator": [
+            39.367100589101632,
+            11.961697000000001
+          ]
+        },
+        "poles_s_inv": [
+          0,
+          -0.30385008855113577
+        ]
+      },
+      "constantHolding": {
+        "effectiveK_Nm_rad": -188.03726679941047,
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            4.77650789582067,
+            -0.30385008855113577
+          ]
+        ],
+        "B": [
+          0,
+          0.025401921529289346
+        ],
+        "C": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "D": [
+          0,
+          0
+        ],
+        "position": {
+          "numerator": 1,
+          "denominator": [
+            39.367100589101632,
+            11.961697000000001,
+            -188.03726679941047
+          ]
+        },
+        "speed": {
+          "numerator": [
+            1,
+            0
+          ],
+          "denominator": [
+            39.367100589101632,
+            11.961697000000001,
+            -188.03726679941047
+          ]
+        },
+        "poles_s_inv": [
+          -2.3427215010233882,
+          2.0388714124722518
+        ]
+      }
+    }
+  }
+}

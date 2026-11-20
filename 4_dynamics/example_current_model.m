@@ -1,0 +1,23 @@
+function demo = example_current_model(loadCase, groupRobot)
+%EXAMPLE_CURRENT_MODEL Use the matching robot and held-shoulder coefficients.
+% Run setup_shoulder_friction first. Keep Eirik's createRobot.m on the path.
+if nargin<1, loadCase='maximum'; end
+if nargin<2, [groupRobot,~]=createRobot(); end
+[robot,info]=ele208_dynamics_model(loadCase,groupRobot);
+p=ele208_joint2_coefficients(loadCase);
+assert(strcmp(info.modelId,p.modelId) && ...
+    strcmp(info.dynamicsVariantId,p.dynamicsVariantId) && ...
+    strcmp(info.parameterSHA256,p.parameterSHA256), ...
+    'ELE208:version','Use the model and coefficients from the same package.');
+q0=p.q0_rad; % controller test pose, separate from trajectory home
+holdingTorque=robot.gravload(q0);
+M=robot.inertia(q0);
+fprintf('%s: J2=%.12g kg m^2, B2=%.12g N m s/rad, g2=%.12g N m\n', ...
+    info.loadCase,M(2,2),p.B_Nm_s_rad,holdingTorque(2));
+% For current-angle compensation use tau2=g2(q)+u2 and hold other joints.
+% The speed plant uses numerator 1 and denominator [J2 B2].
+demo=struct('robot',robot,'info',info,'p',p,'q0',q0, ...
+    'holdingTorque_Nm',holdingTorque,'M_kgm2',M, ...
+    'speedNumerator',p.continuousGravity.speed.numerator, ...
+    'speedDenominator',p.continuousGravity.speed.denominator);
+end
