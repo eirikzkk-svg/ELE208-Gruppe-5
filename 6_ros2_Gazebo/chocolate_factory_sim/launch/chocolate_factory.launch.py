@@ -7,7 +7,9 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 
-
+# AI-assisted (ChatGPT):
+# Assistance with launching Gazebo, spawning the robot,
+# configuring ros2_control and starting the controllers.
 def generate_launch_description():
     sim_path = get_package_share_directory('chocolate_factory_sim')
     robot_path = get_package_share_directory('chocolate_robot_description')
