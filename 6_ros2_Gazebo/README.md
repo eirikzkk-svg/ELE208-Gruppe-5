@@ -1,3 +1,10 @@
+<!--
+AI-generated (ChatGPT):
+This README was generated with AI assistance based on project
+information, technical documentation and instructions provided
+by the author. The content was reviewed and adapted before submission.
+-->
+
 # Chocolate Factory – Gazebo Simulation
 
 Simulation code for the ELE208 chocolate pick-and-place project.
