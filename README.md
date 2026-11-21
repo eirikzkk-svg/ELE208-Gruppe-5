@@ -1,3 +1,8 @@
+<!--
+AI assistance (Claude, Anthropic): added the reference to the ROS 2 / Gazebo
+README in "Getting started" and in the table row for requirement 5.
+-->
+
 # ELE208 Robot Manipulators – Design Challenge 5
 
 5-DOF articulated robot arm that picks chocolate bars from a conveyor belt moving at 0.3 m/s
@@ -10,6 +15,9 @@ Western Norway University of Applied Sciences (HVL), autumn 2026.
    Spatial Math Toolbox and toolbox-common.
 3. Clone this repository and run `setup.m` from the repository root.
 4. Run the script for the requirement you want to check (see the table below).
+5. For requirement 5 (ROS 2 / Gazebo simulation and control from MATLAB), see
+   `6_ros2_gazebo/README.md`. This also requires Ubuntu 24.04, ROS 2 Jazzy,
+   Gazebo Harmonic and MATLAB ROS Toolbox.
 
 ## Repository structure
 | Folder | Contents |
@@ -21,7 +29,6 @@ Western Norway University of Applied Sciences (HVL), autumn 2026.
 | `4_dynamics/` | Dynamic model (masses, centres of mass, inertias) and recursive Newton–Euler |
 | `5_control/` | Joint dynamic model, velocity and position controllers (Simulink) |
 | `6_ros2_gazebo/` | URDF, Gazebo world and MATLAB–ROS 2 control |
-| `figures/` | Figures used in the report |
 | `docs/` | Supporting documents and derivations |
 
 ## Requirements → files
@@ -41,7 +48,7 @@ Run `setup.m` first. Each script can then be run on its own.
 | 4.iii | Velocity controller (shoulder joint) | `5_control/` |
 | 4.iv | Position controller (shoulder joint) | `5_control/` |
 | 4.v | Recursive Newton–Euler inverse dynamics | `4_dynamics/` |
-| 5 | URDF, Gazebo environment, control from MATLAB over ROS 2 | `6_ros2_gazebo/` |
+| 5 | URDF, Gazebo environment, control from MATLAB over ROS 2 | `6_ros2_gazebo/` (instructions in `6_ros2_gazebo/README.md`) |
 
 Shared functions in `common/`: `createRobot.m`, `ConstructPose.m`, `goalPose.m`, `CalculatePickUp.m`.
 
