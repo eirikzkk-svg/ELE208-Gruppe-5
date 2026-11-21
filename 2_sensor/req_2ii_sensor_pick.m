@@ -1,6 +1,12 @@
 %% Requirement 2.ii – Using the camera measurement to command the robot
 % Camera point -> base frame -> pick trajectory (planPick2) -> joint angles.
 % Requires planPick2.m (3_motion_planning).
+% --- AI assistance (Claude, Anthropic) ---
+% Split by AI from AlleOppgaver.m (section 2.ii.1 and the following plots).
+% AI changes: uses createRobot(), variable P for end-effector positions renamed
+% to Pee (it overwrote the parameter struct P), plot titles, labels and comments
+% translated to English, zc*ones(...) simplified to zeros(...). Calculations are unchanged.
+% -----------------------------------------
 clear; clc
 
 [robot, T0C] = createRobot();
