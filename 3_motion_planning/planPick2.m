@@ -1,4 +1,16 @@
 function [qTotal,tTotal] = planPick2(robot,p0,psi, P)
+% --- AI assistance (Claude, Anthropic) ---
+% Base structure (time vectors, poses, ikine, mtraj/ctraj, drop-off and
+% assembly of qTotal/tTotal) written by the author. Claude fixed errors in
+% the segment order and timing, and wrote the smooth down/up transitions
+% (tpoly, posesAlong). The differential kinematics (q_dot = J^-1 * x_dot) is
+% based on the author's earlier script; Claude wrote the loop that
+% recomputes J each step, solves the 5x5 system and integrates the joint angles.
+% Final clean-up by Claude: removed local copies of ConstructPose, goalPose
+% and CalculatePickUp (they are in common/), and added a semicolon in the
+% loop to stop printing.
+% Adapted and tested by the author in MATLAB and Gazebo.
+% -----------------------------------------
 %---Handle time-----------------------------------
 dt = 0.05; 
 dt2 = 0.05;
@@ -26,7 +38,7 @@ qHome = P.qHome;
 qOverStart = robot.ikine(TOverStartOfPickUp, 'mask', [1 1 1 0 1 1], 'q0', qHome);
 qMoveStart = mtraj(@tpoly, qHome, qOverStart, tStart);
 
-%---NY: Down to the chocolate (y: 0 -> -v, z: myk landing)
+%---Down to the chocolate (y: 0 -> -v, z: myk landing)
 y = tpoly(pStart(2) + dy, pStart(2),  tUpDown, 0, -P.v);
 z = tpoly(pStart(3) + dz, pStart(3),  tUpDown, 0, 0);
 TdownToPick = posesAlong(pStart(1), y, z, psi);
@@ -87,7 +99,7 @@ tTotal = [tTotal; tUpDown(2:end)      + t0];  t0 = t0 + tUpDown(end);
 tTotal = [tTotal; tOverDropOff(2:end) + t0];
 end
 
-%% NY: lager en SE3-pose for hvert punkt langs (x, y(i), z(i))
+%% ---lager en SE3-pose for hvert punkt langs (x, y(i), z(i))
 function T = posesAlong(x, y, z, psi)
     T = goalPose([x, y(1), z(1)], psi);
     for i = 2:length(y)

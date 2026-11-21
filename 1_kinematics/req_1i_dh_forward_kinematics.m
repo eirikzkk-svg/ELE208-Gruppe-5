@@ -1,4 +1,8 @@
 %% Requirement 1.i – DH parameters and forward kinematics (symbolic, without Robotics Toolbox)
+% --- AI assistance (Claude, Anthropic) ---
+% Split by AI from AlleOppgaver.m (sections 1.i.1 and 1.i.2).
+% comment translated to English. Calculations are unchanged.
+% -----------------------------------------
 clear; clc
 
 syms q1 q2 q3 q4 q5 real

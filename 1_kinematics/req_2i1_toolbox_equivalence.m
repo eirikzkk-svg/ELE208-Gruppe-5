@@ -1,5 +1,11 @@
 %% Requirement 2.i.1 – Equivalence between own forward kinematics and Robotics Toolbox
 % Runs the symbolic derivation from requirement 1.i, then compares with fkine.
+% --- AI assistance (Claude, Anthropic) ---
+% Split by AI from AlleOppgaver.m (sections 2 and 2.i.1).
+% AI changes: runs req_1i_dh_forward_kinematics to get T05, uses createRobot()
+% instead of the Link definitions, defines W and the numerical parameters locally,
+% comments translated to English. Calculations are unchanged.
+% -----------------------------------------
 
 req_1i_dh_forward_kinematics              % gives the symbolic T05
 

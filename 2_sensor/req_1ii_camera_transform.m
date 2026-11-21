@@ -1,4 +1,8 @@
 %% Requirement 1.ii – Transformation from the camera frame to the robot base
+% --- AI assistance (Claude, Anthropic) ---
+% Split by AI from AlleOppgaver.m (section 1.ii.1).
+% AI changes: comments translated to English. Calculations are unchanged.
+% -----------------------------------------
 clear; clc
 
 xC = 1;  % camera position from base, x [m]

@@ -5,7 +5,6 @@ and places them at a drop-off position. Group project in ELE208 Robotmanipulator
 Western Norway University of Applied Sciences (HVL), autumn 2026.
 
 ## Getting started
-
 1. Install MATLAB with Simulink and Control System Toolbox.
 2. Install Peter Corke's Robotics Toolbox for MATLAB (tested with RTB 10.4),
    Spatial Math Toolbox and toolbox-common.
@@ -13,7 +12,6 @@ Western Norway University of Applied Sciences (HVL), autumn 2026.
 4. Run the script for the requirement you want to check (see the table below).
 
 ## Repository structure
-
 | Folder | Contents |
 |---|---|
 | `common/` | Shared functions used by all parts, e.g. `createRobot.m` |
@@ -27,7 +25,6 @@ Western Norway University of Applied Sciences (HVL), autumn 2026.
 | `docs/` | Supporting documents and derivations |
 
 ## Requirements → files
-
 Run `setup.m` first. Each script can then be run on its own.
 
 | Requirement | Description | File |
@@ -49,10 +46,8 @@ Run `setup.m` first. Each script can then be run on its own.
 Shared functions in `common/`: `createRobot.m`, `ConstructPose.m`, `goalPose.m`, `CalculatePickUp.m`.
 
 ## Videos
-
 - Gazebo simulation: *(add link)*
 - MATLAB animation of the pick cycle: *(add link)*
 
 ## Group
-
 Eirik, Hareth, Sondre, Stian and Susanne.
