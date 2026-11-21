@@ -142,7 +142,7 @@ Both $K_g$ values are negative, producing a positive open-loop pole. The nonline
 | 5 kg shoulder peak, Δt = 0.01 / 0.005 s | 321.155131 / 321.516575 N·m |
 | All joint peaks, Δt = 0.01 to 0.005 s, both objects | Largest relative change below 0.125% |
 
-The repository's [verification record](../verification/VERIFICATION.md) describes the previous executed checks. See also the [source and packaging record](../PROVENANCE.md), [model parameters](../ele208_source_data.m) and [shoulder coefficients](../joint2-coefficients.json).
+See also the [model parameters](../4_dynamics/ele208_source_data.m) and [shoulder coefficients](../4_dynamics/joint2-coefficients.json).
 
 ## Sources
 
