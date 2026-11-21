@@ -1,6 +1,8 @@
 function results = validate_shoulder_friction(action,outFolder)
 %VALIDATE_SHOULDER_FRICTION Existing saved-linear/full-RNE shoulder comparison.
 % Writes results/shoulder; optional 'figures' redraws its saved output only.
+% AI assistance with drafting and debugging the shoulder comparisons,
+% reaction-torque checks, solver checks and plots.
 packageRoot=fileparts(mfilename('fullpath'));
 if nargin<1,action='';end
 if nargin<2 || isempty(outFolder),outFolder=fullfile(packageRoot,'results','shoulder');end

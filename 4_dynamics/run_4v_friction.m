@@ -2,6 +2,8 @@ function results=run_4v_friction(sampling_s,outFolder)
 %RUN_4V_FRICTION Full five-joint RNE on the unchanged saved six-second motion.
 % Default grids: 0.01 and 0.005 s. Optional grids must be among 0.02/0.01/0.005.
 % Generated MAT/JSON/CSV/PNG files go to results/rne unless outFolder is given.
+% AI assistance with drafting and debugging the saved-motion RNE workflow,
+% including load/event handling and torque summaries.
 here=fileparts(mfilename('fullpath'));
 if nargin<1 || isempty(sampling_s),sampling_s=[0.01 0.005];end
 if nargin<2 || isempty(outFolder),outFolder=fullfile(here,'results','rne');end

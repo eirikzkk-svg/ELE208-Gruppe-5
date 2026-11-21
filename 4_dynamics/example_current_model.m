@@ -1,6 +1,8 @@
 function demo = example_current_model(loadCase, groupRobot)
 %EXAMPLE_CURRENT_MODEL Use the matching robot and held-shoulder coefficients.
 % Run setup_shoulder_friction first. Keep Eirik's createRobot.m on the path.
+% AI assistance with drafting and adapting this model/coefficients example
+% and reviewing its consistency checks.
 if nargin<1, loadCase='maximum'; end
 if nargin<2, [groupRobot,~]=createRobot(); end
 [robot,info]=ele208_dynamics_model(loadCase,groupRobot);

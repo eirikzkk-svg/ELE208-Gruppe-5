@@ -5,6 +5,8 @@ function [robot, meta] = ele208_dynamics_model(loadCase, groupRobot)
 % Geometry, joint limits, base and tool are kept from the input robot.
 % Without an input robot, use the saved DH model and limits.
 % The gripper and object are included, so do not add them with payload().
+% AI assistance with drafting and debugging the dynamics implementation,
+% including load bookkeeping and motor-inertia/friction conventions.
 if nargin<1 || isempty(loadCase), loadCase='maximum'; end
 data=ele208_source_data();
 loadCase=lower(char(loadCase));

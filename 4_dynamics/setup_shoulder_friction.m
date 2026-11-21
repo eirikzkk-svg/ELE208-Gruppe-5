@@ -1,6 +1,8 @@
 function environment = setup_shoulder_friction(dependencyRoot)
 %SETUP_SHOULDER_FRICTION Add this model and check the Peter Corke toolboxes.
 % The optional folder contains the three named toolbox directories below.
+% AI assistance with drafting and adapting the dependency/path setup
+% for this dynamics handover.
 here=fileparts(mfilename('fullpath'));
 if nargin>0 && ~isempty(dependencyRoot)
     for name={'toolbox-common-matlab','spatialmath-matlab','robotics-toolbox-matlab'}

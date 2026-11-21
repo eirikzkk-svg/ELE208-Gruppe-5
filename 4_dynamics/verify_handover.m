@@ -2,6 +2,8 @@ function verification=verify_handover()
 %VERIFY_HANDOVER Reproduce current outputs and compare packaged saved evidence.
 % Configure the external toolboxes with setup_shoulder_friction first.
 % Writes only results/. This is a packaging check, not a new model test suite.
+% AI assistance with drafting the package-verification code and comparisons
+% against the saved model, RNE and shoulder results.
 here=fileparts(mfilename('fullpath'));
 oldPath=path;restore=onCleanup(@()path(oldPath)); %#ok<NASGU>
 env=setup_shoulder_friction();

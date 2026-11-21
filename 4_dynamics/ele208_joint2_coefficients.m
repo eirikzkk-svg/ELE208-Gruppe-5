@@ -9,6 +9,8 @@ function p = ele208_joint2_coefficients(loadCase)
 % Use tau2=g2(q)+u2 and hold the other joints fixed. J includes motor inertia.
 % p.continuousGravity uses current-angle gravity compensation.
 % p.constantHolding uses only the holding torque at the controller test pose.
+% AI assistance with the shoulder-model derivation and with drafting
+% this coefficient loader and its model-consistency checks.
 if nargin<1, loadCase='maximum'; end
 loadCase=lower(char(loadCase));
 assert(ismember(loadCase,{'maximum','empty'}),'ELE208:loadCase','Use maximum or empty.');

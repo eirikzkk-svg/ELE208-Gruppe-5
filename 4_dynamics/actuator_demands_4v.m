@@ -1,6 +1,8 @@
 function demands=actuator_demands_4v(outFolder)
 %ACTUATOR_DEMANDS_4V Separate ideal motor-equivalent and reducer output loads.
 % Postprocess saved RNE. No trajectory or dynamics is rerun.
+% AI assistance with drafting the motor/reducer torque postprocessing
+% and checking the rotor-inertia and viscous-friction bookkeeping.
 if nargin<1 || isempty(outFolder)
     outFolder=fullfile(fileparts(mfilename('fullpath')),'results','rne');
 end

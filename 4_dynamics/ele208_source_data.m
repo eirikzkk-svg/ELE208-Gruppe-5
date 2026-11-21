@@ -3,6 +3,8 @@ function data = ele208_source_data()
 % Units: kg, m and kg*m^2. Inertias are about each link's centre of mass.
 % All properties use the local DH frames D1 to D5.
 % data.robot.mass lists links 1-5 without the gripper or object.
+% AI assistance with discussing mass assumptions, checking mass properties,
+% and drafting and adapting this parameter-data file.
 data.modelId='ELE208-hollow-modular-2026-11-04-v2';
 data.dynamicsVariantId='ELE208-v2-shoulder-viscous-2026-11-09-v1';
 % parameterSHA256 identifies the unchanged v2 rigid-body parameter source.

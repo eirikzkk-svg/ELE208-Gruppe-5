@@ -1,5 +1,7 @@
 function plot_4v_friction(here,tr,run)
 %PLOT_4V_FRICTION Plot current applied torques, retaining both event limits.
+% AI assistance with drafting and adapting the torque plots, event-limit
+% connectors and figure-export code.
 set(groot,'defaultAxesFontSize',11,'defaultLineLineWidth',1.5);
 colors=[0.08 0.32 0.66;0.85 0.28 0.12];names={'nominal','maximum'};
 fig=figure('Visible','off','Color','w','Position',[30 30 1200 1250]);

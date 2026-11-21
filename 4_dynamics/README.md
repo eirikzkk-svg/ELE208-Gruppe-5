@@ -47,3 +47,8 @@ The calculated maximum-load shoulder peak is approximately 322 N·m on the 0.005
 The shoulder comparison uses `q0=[0,pi/4,0,0,0]` with joints 1, 3, 4 and 5 held fixed. It compares gravity compensation at the current angle with constant equilibrium holding torque.
 
 See [verification](verification/VERIFICATION.md) and [provenance](PROVENANCE.md) for detailed checks and assumptions.
+
+## Supporting material
+
+- [Dynamics parameters, assumptions and derivation](docs/dynamics-supporting-material.md)
+- [Camera selection and optical calculations](docs/camera-selection-and-optical-calculations.md)
